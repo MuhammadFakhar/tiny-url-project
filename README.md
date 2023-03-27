@@ -5,7 +5,7 @@ Getting Started
 
 To get started with the Tiny URL App, follow these steps:
 
-    Clone the repository: git clone https://github.com/<your-username>/tiny-url-app.git
+    Clone the repository: git clone https://github.com/MuhammadFakhar/tiny-url-app.git
     Navigate to the app directory: cd tiny-url-app
     Install dependencies: bundle install
     Setup the database: rails db:migrate
@@ -18,7 +18,6 @@ To use the Tiny URL App, follow these steps:
 
     Navigate to the home page http://localhost:3000.
     Enter a long URL that you want to shorten in the input field.
-    Click on the "Shorten" button.
     The app will generate a unique short code for the URL.
     Copy the shortened URL and use it as needed.
     To redirect to the original URL, enter the shortened code in the address bar of your browser.
@@ -31,9 +30,7 @@ The Tiny URL App follows the standard Rails MVC architecture and uses the follow
 
     Controller: The app has a single controller, UrlsController, which handles the creation of new shortened URLs and redirects to the original URL when a user enters a shortened code.
 
-    Views: The app has two views: new.html.erb, which displays a form for users to submit a URL to be shortened, and show.html.erb, which displays the original URL when a user enters a valid shortened code.
-
-    Routes: The app has two routes: root, which maps to the new action of the UrlsController, and /:short_code, which maps to the show action of the UrlsController.
+    Routes: The app has two routes: which maps to the new action of the UrlsController, and /:short_code, which maps to the show action of the UrlsController.
 
     Service: The app has a UrlShortener service object that generates a unique short code for each URL. This service object is used in the UrlsController to create new shortened URLs.
 
